@@ -1,0 +1,53 @@
+{% extends 'diary/arch.html' %}
+
+{% block content %}
+    <h2>What's On</h2>
+    
+	{% for event in events %}
+	    {% if event.is_public %}
+	    <div id="event_info"{% if not event.deposit_date %}class="prov"{% endif %}>
+            
+            <p>{% if event.is_weekly %}Every {{ event.start_date|date:"l" }}
+            {% else %}{% if not event.deposit_date %}*-{ {% endif %}<span class="date">{{ event.start_date|date:"l j F Y" }}{% if event.end_date %} - {{ event.end_date|date:"l j F Y" }}{% endif %}</span>  {% endif %}<br />
+            <b>{{ event.open_time }}</b> - {{ event.end_time }}<br />
+            <span class='space'>{{ event.space }}</span>
+            {% if event.getin_time %}
+            Get In: {{ event.getin_time }} 
+            {% endif %}
+            {% if event.setup_time %}
+            Set-up: {{ event.setup_time }}
+            {% endif %}
+            </p>
+            <a href="/event/{{ event.pk }}"><h3 {% if event.deposit_date %}class="event_title"
+            {% else %}class="prov"
+            {% endif %}">{{ event.title }}{% if not event.deposit_date %} }-* {% endif %}</h3></a>
+            <p>{% if event.featured_img %}<img src="/media/{{ event.featured_img }}" width="230" class="border"/> {% endif %}{{ event.details }}
+            </p>
+        </div>
+        <div id="price_info">
+            {% if event.is_public %}
+            <b>Door Price:</b> 
+            {% if event.door_price < 0 %}
+                Free
+            {% elif event.door_price == 0 %}
+			    Magic Hat donations
+		    {% elif event.door_price == None %}
+			    -?-
+            {% else %}
+			    £{{ event.door_price }}
+		    {% endif %} 
+                {% if event.conc_price %}
+                / {{ event.conc_price }}
+                {% endif %}
+                {% if event.adv_price %}
+                <br /><b>Advance:</b> £{{ event.adv_price }} from <a href="{{ event.ticket_link }}">{{ event.ticket_link }}</a>
+                {% endif %}
+            {% endif %}
+        </div>
+        <div id="hirer_info">
+            <p><b>Contact:</b> <a href="mailto:{{ event.hirer_email }}">{{ event.hirer_email }}</a>
+        </div>
+        <hr />
+        {% endif %}
+	{% endfor %}
+{% endblock %}

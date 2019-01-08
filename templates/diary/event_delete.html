@@ -1,0 +1,49 @@
+{% extends 'diary/arch.html' %}
+
+{% block content %}
+        <div id="event_info">
+            <p>{{ event.space }} <span class="date">{{ event.start_date }}</span> - {{ event.end_date }}
+                {% if event.is_weekly %}
+                    Weekly
+                {% endif %}
+            <b>{{ event.open_time }}</b> - {{ event.end_time }}
+            </p>
+            <h1 class="event_title">{{ event.title }}</h1>
+            <img src="{{ event.featured_img }}" />
+            <p>{{ event.details }}
+            {% if not event.is_public %}
+                Private event.
+            {% endif %}</p>
+        </div>
+        <div id="price_info">
+            {% if event.is_public %}
+            <b>Door Price:</b> £{{ event.door_price }}<br />
+            <b>Concs:</b> {{ event.conc_price }}<br />
+            <b>Advance:</b> {{ event.adv_price }} from {{ event.ticket_link }}
+            {% endif %}
+        </div>
+        <hr />
+        <div id="setup_info">
+            <p><b>Get In:</b> {{ event.getin_time }} <b>Set-up:</b> {{ event.setup_time }}</p>
+        </div>
+        <div id="hirer_info">
+            <p><b>Hirer:</b> {{ event.hirer_name }}<br />
+            {{ event.hirer_address }}<br />
+            {{ event.hirer_postcode }}<br />
+            {{ event.hirer_email }}<br />
+            {{ event.hirer_phone }}
+            {{ event.hirer_mobile }}
+            </p>
+        </div>
+        <div id="fee_info">
+            <p><b>TOTAL FEE:</b> {{ event.total_fee }}<br />
+            <b>Deposit:</b> {{ event.deposit }} <b>Paid:</b> {{ event.deposit_date }}<br />
+            <b>Balance:</b> {{ event.balance_due }} <b>Due:</b> {{ event.balance_date }}
+            </p>
+        </div>
+        <hr />
+        <div id="office_info">
+            <p><b>Date booked:</b> {{ event.date_created }}
+            {% if event.date_updated %}<b>Updated:</b> {{ event.date_updated }}{% endif %} by {{ event.owner }}
+        </div>
+{% endblock %}

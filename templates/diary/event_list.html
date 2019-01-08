@@ -1,0 +1,53 @@
+{% extends 'diary/arch.html' %}
+
+{% block content %}
+    <h2>Calendar</h2>
+    <table>
+	<caption>Forthcoming Events</caption>
+	    <tr>
+	        <th  valign="bottom"  align="left"><b>DATE</b></th>
+	        <th  valign="bottom"  align="left"><b>TIME</b></th>
+	        <th  valign="bottom"  align="left"><b>Title</b></th>
+	        <th  valign="bottom"  align="left"><b>Details</b></th>
+	        <th  valign="bottom"  align="left"><b>Price</b></th>
+	        <th  valign="bottom"  align="left"><b>Contact</b></th>
+	    </tr>
+	    {% for event in events %}
+	    <tr class="{% if event.start_date|date:"l" == 'Friday' or event.start_date|date:"l" == 'Saturday' %}
+	    weekend
+	    {% elif event.start_date|date:"l" == 'Thursday' %}
+	    thursday
+	    {% endif %}
+	    {% if not event.deposit_date %}
+	     prov
+	    {% endif %}">
+	        <td  valign="top"  align="left">{{ event.start_date }}</td>
+	        <td  valign="top"  align="left">{{ event.open_time }}</td>
+	        <td  valign="top"  align="left" class="event_title"><a href="/event/{{ event.pk }}"><h3 {% if event.deposit_date %}class="event_title"
+                {% else %}class="prov"
+                {% endif %}">{{ event.title }}</h3></a></td>
+	        <td  valign="top"  align="left">{{ event.details }}</td>
+	        <td  valign="top"  align="left">
+		    {% if event.is_public == False %}
+			    Private
+		    {% elif event.door_price < 0 %}
+                    Free
+            {% elif event.door_price == 0 %}
+			    Magic Hat donations
+		    {% elif event.door_price == None %}
+			    -?-
+                    {% else %}
+			    £{{ event.door_price }}
+		    {% endif %}
+		    {% if event.conc_price %}
+		        <br />Concs: £{{ event.conc_price }}
+		    {% endif %}
+		    {% if event.adv_price %}
+		        <br />Adv: £{{ event.adv_price }}
+		    {% endif %}
+	        </td>
+	        <td  valign="top"  align="left">{{ event.hirer_name }}</td>
+	    </tr>
+	{% endfor %}
+    </table>
+{% endblock %}

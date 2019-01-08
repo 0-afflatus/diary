@@ -1,0 +1,41 @@
+{% extends 'diary/arch.html' %}
+
+{% block content %}
+    <h2>Briefing</h2>
+    
+	{% for event in events %}
+	    {% if event.is_public  and event.deposit_date %}
+	    <div class="datetime">
+            <p><span class="date">{{ event.start_date|date:"l j F Y" }}{% if event.end_date %} - {{ event.end_date|date:"l j F Y" }}{% endif %}</span><br />
+            <b>{{ event.open_time }}</b> - {{ event.end_time }}<br />
+            <span class='space'>{{ event.space }}</span>
+            {% if event.is_weekly %}
+                - Weekly
+            {% endif %}
+            </p>
+        </div>
+	    <div id="event_info">
+            <a href="event/{{ event.pk }}"><h3 class="event_title">{{ event.title }}</h3></a>
+            <p>{% if event.featured_img %}<img src="/media/{{ event.featured_img }}" class="listing border"/> {% endif %}{{ event.details|truncatewords:42 }}
+            <br /><b>
+            {% if event.door_price < 0 %}
+                Free
+            {% elif event.door_price == 0 %}
+			    Magic Hat donations
+		    {% elif event.door_price == None %}
+			    
+            {% else %}
+			    £{{ event.door_price }}
+		    {% endif %}</b> 
+                {% if event.conc_price %}
+                / {{ event.conc_price }}
+                {% endif %}
+                {% if event.adv_price %}
+                Advance: £{{ event.adv_price }} from <a href="{{ event.ticket_link }}">{{ event.ticket_link }}</a>
+                {% endif %}
+            </p>
+        </div>
+        <hr />
+        {% endif %}
+	{% endfor %}
+{% endblock %}

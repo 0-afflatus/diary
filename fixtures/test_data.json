@@ -1,0 +1,783 @@
+[
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "diary",
+        "model": "event"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "lbe3njb825uecmny2bri9c6fyw4emj3z",
+    "fields": {
+        "session_data": "MmRkNjcyYWYyYTUxOTExZDRhYmMzY2M2NDI2NjkyY2VjMjU0ZGE2Mzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjZjBjZjhlMmRkMWY5NWFlZWJmZjdmZjJmYTQyMWU3NmMwYmE0NTA0In0=",
+        "expire_date": "2018-06-09T15:17:05.102Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "xxrr5yiaqbqjwa1d89vrezwlgvl92a8a",
+    "fields": {
+        "session_data": "MmRkNjcyYWYyYTUxOTExZDRhYmMzY2M2NDI2NjkyY2VjMjU0ZGE2Mzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjZjBjZjhlMmRkMWY5NWFlZWJmZjdmZjJmYTQyMWU3NmMwYmE0NTA0In0=",
+        "expire_date": "2018-06-07T15:19:13.655Z"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can add event",
+        "content_type": 7,
+        "codename": "add_event"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can change event",
+        "content_type": 7,
+        "codename": "change_event"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can delete event",
+        "content_type": 7,
+        "codename": "delete_event"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$100000$0oFiTo2NxqAj$SMEce/5xZRbgiD2VX7hd7zeFAkC8jPq8KPhaWs9FLHs=",
+        "last_login": "2018-05-26T15:17:05.097Z",
+        "is_superuser": true,
+        "username": "wizard",
+        "first_name": "",
+        "last_name": "",
+        "email": "tim@assemblyrooms.org.uk",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2018-05-24T15:18:21.738Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "diary.event",
+    "pk": 1,
+    "fields": {
+        "title": "Flamenco Night",
+        "details": "",
+        "featured_img": "",
+        "space": "Hall",
+        "is_public": true,
+        "start_date": "2018-05-25",
+        "end_date": null,
+        "getin_time": null,
+        "setup_time": null,
+        "open_time": "20:00:00",
+        "end_time": "23:59:59",
+        "is_weekly": false,
+        "adv_price": null,
+        "door_price": null,
+        "conc_price": null,
+        "ticket_link": null,
+        "total_fee": null,
+        "deposit": null,
+        "balance_due": null,
+        "deposit_date": null,
+        "balance_date": null,
+        "hirer_name": "Mr Brinners",
+        "hirer_address": null,
+        "hirer_postcode": null,
+        "hirer_email": null,
+        "hirer_phone": null,
+        "hirer_mobile": null,
+        "event_slug": null,
+        "date_created": "2018-05-24T15:44:39.596Z",
+        "date_updated": null,
+        "owner": 1
+    }
+},
+{
+    "model": "diary.event",
+    "pk": 2,
+    "fields": {
+        "title": "Memorial concert for Martin Cockerham",
+        "details": "",
+        "featured_img": "",
+        "space": "Hall",
+        "is_public": false,
+        "start_date": "2018-05-26",
+        "end_date": null,
+        "getin_time": null,
+        "setup_time": null,
+        "open_time": "18:30:00",
+        "end_time": "23:59:59",
+        "is_weekly": false,
+        "adv_price": null,
+        "door_price": null,
+        "conc_price": null,
+        "ticket_link": null,
+        "total_fee": null,
+        "deposit": null,
+        "balance_due": null,
+        "deposit_date": null,
+        "balance_date": null,
+        "hirer_name": "Rosie Foye",
+        "hirer_address": null,
+        "hirer_postcode": null,
+        "hirer_email": null,
+        "hirer_phone": null,
+        "hirer_mobile": null,
+        "event_slug": null,
+        "date_created": "2018-05-24T15:45:55.282Z",
+        "date_updated": null,
+        "owner": 1
+    }
+},
+{
+    "model": "diary.event",
+    "pk": 3,
+    "fields": {
+        "title": "Ayla Nereo",
+        "details": "Acoustic concert",
+        "featured_img": "",
+        "space": "Hall",
+        "is_public": true,
+        "start_date": "2018-06-15",
+        "end_date": null,
+        "getin_time": null,
+        "setup_time": null,
+        "open_time": "20:00:00",
+        "end_time": "23:59:59",
+        "is_weekly": false,
+        "adv_price": null,
+        "door_price": "15.00",
+        "conc_price": null,
+        "ticket_link": null,
+        "total_fee": null,
+        "deposit": null,
+        "balance_due": null,
+        "deposit_date": null,
+        "balance_date": null,
+        "hirer_name": "Green",
+        "hirer_address": null,
+        "hirer_postcode": null,
+        "hirer_email": null,
+        "hirer_phone": null,
+        "hirer_mobile": null,
+        "event_slug": null,
+        "date_created": "2018-05-24T15:47:10.225Z",
+        "date_updated": null,
+        "owner": 1
+    }
+},
+{
+    "model": "diary.event",
+    "pk": 4,
+    "fields": {
+        "title": "Renewal of Vows",
+        "details": "",
+        "featured_img": "",
+        "space": "Hall",
+        "is_public": false,
+        "start_date": "2018-06-30",
+        "end_date": null,
+        "getin_time": null,
+        "setup_time": null,
+        "open_time": "18:30:00",
+        "end_time": "23:59:59",
+        "is_weekly": false,
+        "adv_price": null,
+        "door_price": null,
+        "conc_price": null,
+        "ticket_link": null,
+        "total_fee": null,
+        "deposit": null,
+        "balance_due": null,
+        "deposit_date": null,
+        "balance_date": null,
+        "hirer_name": "Nataly Churchill",
+        "hirer_address": null,
+        "hirer_postcode": null,
+        "hirer_email": null,
+        "hirer_phone": null,
+        "hirer_mobile": null,
+        "event_slug": null,
+        "date_created": "2018-05-24T15:48:09.841Z",
+        "date_updated": null,
+        "owner": 1
+    }
+},
+{
+    "model": "diary.event",
+    "pk": 5,
+    "fields": {
+        "title": "Wedding Party",
+        "details": "",
+        "featured_img": "",
+        "space": "Hall",
+        "is_public": false,
+        "start_date": "2018-09-15",
+        "end_date": null,
+        "getin_time": null,
+        "setup_time": null,
+        "open_time": "19:00:00",
+        "end_time": "23:59:59",
+        "is_weekly": false,
+        "adv_price": null,
+        "door_price": null,
+        "conc_price": null,
+        "ticket_link": null,
+        "total_fee": null,
+        "deposit": null,
+        "balance_due": null,
+        "deposit_date": null,
+        "balance_date": null,
+        "hirer_name": "Mark McLennan",
+        "hirer_address": null,
+        "hirer_postcode": null,
+        "hirer_email": null,
+        "hirer_phone": null,
+        "hirer_mobile": null,
+        "event_slug": null,
+        "date_created": "2018-05-24T15:49:00.170Z",
+        "date_updated": null,
+        "owner": 1
+    }
+},
+{
+    "model": "diary.event",
+    "pk": 6,
+    "fields": {
+        "title": "Exhibition of Mythic Arts and Crafts",
+        "details": "",
+        "featured_img": "",
+        "space": "Hall",
+        "is_public": true,
+        "start_date": "2018-09-29",
+        "end_date": null,
+        "getin_time": null,
+        "setup_time": null,
+        "open_time": "10:00:00",
+        "end_time": "23:59:59",
+        "is_weekly": false,
+        "adv_price": null,
+        "door_price": null,
+        "conc_price": null,
+        "ticket_link": null,
+        "total_fee": null,
+        "deposit": null,
+        "balance_due": null,
+        "deposit_date": null,
+        "balance_date": null,
+        "hirer_name": "Alexandra Dawe",
+        "hirer_address": null,
+        "hirer_postcode": null,
+        "hirer_email": null,
+        "hirer_phone": null,
+        "hirer_mobile": null,
+        "event_slug": null,
+        "date_created": "2018-05-24T15:50:13.021Z",
+        "date_updated": null,
+        "owner": 1
+    }
+},
+{
+    "model": "diary.event",
+    "pk": 7,
+    "fields": {
+        "title": "Hare Krsna Celebration",
+        "details": "",
+        "featured_img": "",
+        "space": "Hall",
+        "is_public": true,
+        "start_date": "2018-10-07",
+        "end_date": null,
+        "getin_time": null,
+        "setup_time": null,
+        "open_time": "19:00:00",
+        "end_time": "23:59:59",
+        "is_weekly": false,
+        "adv_price": null,
+        "door_price": null,
+        "conc_price": null,
+        "ticket_link": null,
+        "total_fee": null,
+        "deposit": null,
+        "balance_due": null,
+        "deposit_date": null,
+        "balance_date": null,
+        "hirer_name": "Jamuna",
+        "hirer_address": null,
+        "hirer_postcode": null,
+        "hirer_email": null,
+        "hirer_phone": null,
+        "hirer_mobile": null,
+        "event_slug": null,
+        "date_created": "2018-05-24T15:51:00.813Z",
+        "date_updated": null,
+        "owner": 1
+    }
+},
+{
+    "model": "diary.event",
+    "pk": 8,
+    "fields": {
+        "title": "Wild Womens Spring Gathering",
+        "details": "",
+        "featured_img": "",
+        "space": "Hall",
+        "is_public": true,
+        "start_date": "2019-02-02",
+        "end_date": null,
+        "getin_time": null,
+        "setup_time": null,
+        "open_time": "09:30:00",
+        "end_time": "23:59:59",
+        "is_weekly": false,
+        "adv_price": null,
+        "door_price": null,
+        "conc_price": null,
+        "ticket_link": null,
+        "total_fee": null,
+        "deposit": null,
+        "balance_due": null,
+        "deposit_date": null,
+        "balance_date": null,
+        "hirer_name": "Natalie Green",
+        "hirer_address": null,
+        "hirer_postcode": null,
+        "hirer_email": null,
+        "hirer_phone": null,
+        "hirer_mobile": null,
+        "event_slug": null,
+        "date_created": "2018-05-24T15:51:57.730Z",
+        "date_updated": null,
+        "owner": 1
+    }
+},
+{
+    "model": "diary.event",
+    "pk": 9,
+    "fields": {
+        "title": "Wedding Reception",
+        "details": "",
+        "featured_img": "",
+        "space": "Hall",
+        "is_public": false,
+        "start_date": "2019-05-18",
+        "end_date": null,
+        "getin_time": null,
+        "setup_time": null,
+        "open_time": "16:00:00",
+        "end_time": "23:59:59",
+        "is_weekly": false,
+        "adv_price": null,
+        "door_price": null,
+        "conc_price": null,
+        "ticket_link": null,
+        "total_fee": null,
+        "deposit": null,
+        "balance_due": null,
+        "deposit_date": null,
+        "balance_date": null,
+        "hirer_name": "Kat Bastin",
+        "hirer_address": null,
+        "hirer_postcode": null,
+        "hirer_email": null,
+        "hirer_phone": null,
+        "hirer_mobile": null,
+        "event_slug": null,
+        "date_created": "2018-05-24T15:52:43.238Z",
+        "date_updated": null,
+        "owner": 1
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2018-05-24T15:44:39.605Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "Flamenco Night",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2018-05-24T15:45:55.287Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "Memorial concert for Martin Cockerham",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2018-05-24T15:47:10.230Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "Ayla Nereo",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2018-05-24T15:48:09.846Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "Renewal of Vows",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2018-05-24T15:49:00.175Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "Wedding Party",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2018-05-24T15:50:13.027Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "6",
+        "object_repr": "Exhibition of Mythic Arts and Crafts",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2018-05-24T15:51:00.818Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "7",
+        "object_repr": "Hare Krsna Celebration",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2018-05-24T15:51:57.736Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "8",
+        "object_repr": "Wild Womens Spring Gathering",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2018-05-24T15:52:43.244Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "9",
+        "object_repr": "Wedding Reception",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2018-05-24T15:53:26.090Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "Memorial concert for Martin Cockerham",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"is_public\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2018-05-24T15:53:26.101Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "Renewal of Vows",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"is_public\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2018-05-24T15:53:26.112Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "Wedding Party",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"is_public\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2018-05-24T15:53:26.124Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "9",
+        "object_repr": "Wedding Reception",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"is_public\"]}}]"
+    }
+}
+]

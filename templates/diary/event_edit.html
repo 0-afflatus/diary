@@ -1,0 +1,48 @@
+{% extends 'diary/arch.html' %}
+
+{% block content %}
+        <form method="POST" enctype="multipart/form-data">{% csrf_token %}
+            <div class="align_right"><button type="submit" class="save button"><img class="mark" src="/static/icons/dialog-ok.svg">Save</button></div>
+        <div id="event_info">
+            <p><label for="id_title">Title:</label>{{ form.title }}<br />
+            <label for="id_space">Space:</label> {{ form.space }}<br />
+            <label for="id_start_date">Start date:</label> {{ form.start_date }} <label for="id_end_date">End date:</label>{{ form.end_date }}</p>
+            <p><label for="id_is_weekly">Weekly?:</label> {{ form.is_weekly }} 
+            <label for="id_is_public">Public?:</label> {{ form.is_public }}</p>
+            <label for="id_featured_image">Image:</label>{{ form.featured_img }}
+            <p><label for="id_details">Details:</label>{{ form.details }}</p>
+        </div>
+        <div id="price_info">
+            
+            <b><label for="id_door_price">Door Price:</label></b> £{{ form.door_price }}
+            <b><label for="id_conc_price">Concs:</label></b> £{{ form.conc_price }}<br />
+            <b><label for="id_adv_price">Advance:</label></b> £{{ form.adv_price }} <label for="id_ticket_link">Ticket link:</label>{{ form.ticket_link }}
+            
+        </div>
+        <hr />
+        <div id="setup_info">
+            <p><label for="id_open_time">Doors open:</label> {{ form.open_time }} <label for="id_end_time">End time:</label> {{ form.end_time }}<br />
+            <label for="id_getin_time">Get In:</label> {{ form.getin_time }} <label for="id_setup_time">Set-up:</label> {{ form.setup_time }}</p>
+        </div>
+        <div id="hirer_info">
+            <p><label for="id_hirer_name">Hirer:</label> {{ form.hirer_name }}<br />
+            <label for="id_hirer_address">Address:</label>{{ form.hirer_address }}<br />
+            <label for="id_hirer_postcode">Postcode:</label>{{ form.hirer_postcode }}<br />
+            <label for="id_hirer_email">Email:</label>{{ form.hirer_email }}<br />
+            <label for="id_hirer_phone">Phone:</label>{{ form.hirer_phone }}
+            <label for="id_hirer_mobile">Mobile:</label>{{ form.hirer_mobile }}
+            </p>
+        </div>
+        <div id="fee_info">
+            <p><label for="id_total_fee">TOTAL FEE:</label> £{{ form.total_fee }}<br />
+            <label for="id_deposit">Deposit:</label> £{{ form.deposit }} <label for="id_deposit_date">Paid:</label> {{ form.deposit_date }}<br />
+            <label for="id_balance_due">Balance:</label> £{{ form.balance_due }} <label for="id_balance_date">Due:</label> {{ form.balance_date }}
+            </p>
+        </div>
+        <hr />
+        <div id="office_info">
+            <p><label for="id_date_created">Date booked:</label> {{ event.date_created }}
+            {% if event.date_updated %}<label for="id_date_updated">Updated:</label> {{ event.date_updated }}{% endif %} by {{ form.owner }}
+        </div>
+    </form>
+{% endblock %}
